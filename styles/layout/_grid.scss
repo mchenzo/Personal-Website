@@ -1,0 +1,16 @@
+@mixin row() {
+	font-size: 0; //gets rid of unwanted margin between inline-block elements
+}
+
+@mixin col($col, $total, $gap: 1em, $align: top, $first: false, $last: false){ 
+	width: 100%;
+	font-size: 14px;
+	display: inline-block;
+	padding-left: if($first, 0, $gap);	//if an element is set with col($first:true) no padding on left
+	padding-right: if($last, 0, $gap);	//vice versa on right for $last:true
+
+	@media only screen and (min-width: 768px) {
+		width: percentage($col/$total);
+		vertical-align: $align;
+	}
+}
