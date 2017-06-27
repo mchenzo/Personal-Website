@@ -48,6 +48,9 @@ table {
 }
 
 *{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	&:before,
 	&:after{
 		-webkit-box-sizing: border-box;
@@ -73,7 +76,7 @@ table {
 @import "layout/grid";
 
 body{
-	color: $eggshell;
+	color: $coral;
 	font: 300 16px/22px "Lato", "Open Sans", Helvetica, sans-serif;
 	background: $navy-blue;
 }
@@ -102,8 +105,19 @@ body{
 
 .container, .grid{
 	margin: 0 auto;
-	width: 960px;
+	width: 80%;
 }
+
+.col-1-3{
+	@include colum(1,3, 15px);
+	:first-child{
+		@include colum(1,3,15px, $first:true);
+	}
+	:last-child{
+		@include colum(1,3,15px, $last:true);
+	}
+}
+
 
 
 
@@ -149,9 +163,8 @@ body{
 	===============================
 */
 .row{
-	background: #fff;
-	padding: 66px 0 44px 0;
-	min-width: 960px;
+	@include row(#fff, 66px, 44px);
+	background: $eggshell;
 }
 
 
@@ -171,11 +184,75 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Hero
+	===============================
+*/
+.hero{
+	background: $eggshell;
+	padding: 66px 80px 56px 80px;
+	margin-bottom: 55px;
+	text-align: center;
+	transition: 0.5s;
+	h1{
+		font-weight: 300;
+		color: $navy-blue;
+	}
+	p{
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 44px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 	===============================
 	Footer
 	===============================
 */
+.foot{
+	max-height: 50px;
+	font-size: 14px;
+	padding-bottom: 44px;
+	color: $coral;
+	small{
+		margin-top: 22px;
+		float: left;
+	}
+	.nav{
+		margin-top: 22px;
+		margin-bottom: 22px;
+	}
+}
+
+
+
+
 
 
 
@@ -184,12 +261,11 @@ body{
 	Navigation
 	===============================
 */
-
 .nav{
 	li{
-		display: inline-block;
-		margin: 0 10px;
+		margin: 0 14px;
 		vertical-align: top;
+		display: inline-block;
 	}
 	li:last-child{
 		margin-right: 0;
@@ -199,8 +275,24 @@ body{
 	letter-spacing: .5px;
 	text-transform: uppercase;
 	text-align: right;
-	margin: 66px 0 22px 0
+	margin: 66px 0 22px 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 	===============================
@@ -209,9 +301,9 @@ body{
 */
 a{
 	text-decoration: none;
-	color: $eggshell;
+	color: $coral;
 	&:hover{
-		color: $coral;
+		color: #fff;
 	}
 }
 
@@ -224,20 +316,89 @@ a{
 
 /*
 	===============================
-	Buttons
+	Logo
 	===============================
 */
-
-
 .logo{
 	padding: 40px 0 22px 0;
-	float:left;
+	float: left;
 	font-size: 48px;
 	line-height: 44px;
 	font-weight: 100;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
+	border-top: 4px solid $coral;
 }
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Teaser
+	===============================
+*/
+.teaser{
+	img{
+		max-width: 100%;
+		margin-bottom: 22px;
+	}
+	p{
+		color: $navy-blue;
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Typography
+	===============================
+*/
+
+h1, h3, h4, h5, p{
+	margin-bottom: 22px;
+}
+h3, h4{
+	color: $coral;
+}
+h1{
+	font-size: 36px;
+	line-height: 44px;
+}
+h2{
+	font-size: 24px;
+	line-height: 44px;
+}
+h3{
+	font-size: 21px;
+}
+h4{
+	font-size: 18px;
+}
+h5{
+	color: $navy-blue;
+	font-size: 14px;
+	font-weight: 400px;
+	text-transform: uppercase;
+}
+p{
+	color: $navy-blue;
+}
+
 
 
 
