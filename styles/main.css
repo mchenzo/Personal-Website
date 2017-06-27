@@ -52,8 +52,107 @@ table {
 
 /*
 	===============================
-	imports
+	Imports
 	===============================
 */
+body {
+  color: #F5F5F5;
+  font: 300 16px/22px "Lato", "Open Sans", Helvetica, sans-serif;
+  background: #0F1626; }
+
+/*
+	===============================
+	Grid
+	===============================
+*/
+.container {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.grid {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.container, .grid {
+  margin: 0 auto;
+  width: 960px; }
+
+/*
+	===============================
+	Clearfix
+	===============================
+*/
+.group {
+  clear: both;
+  *zoom: 1; }
+  .group:before, .group:after {
+    content: "";
+    display: table; }
+  .group:after {
+    clear: both; }
+
+/*
+	===============================
+	Row
+	===============================
+*/
+.row {
+  background: #fff;
+  padding: 66px 0 44px 0;
+  min-width: 960px; }
+
+/*
+	===============================
+	Header
+	===============================
+*/
+/*
+	===============================
+	Footer
+	===============================
+*/
+/*
+	===============================
+	Navigation
+	===============================
+*/
+.nav {
+  font-size: 14px;
+  font-weight: 400px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 66px 0 22px 0; }
+  .nav li {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top; }
+  .nav li:last-child {
+    margin-right: 0; }
+
+/*
+	===============================
+	Links
+	===============================
+*/
+a {
+  text-decoration: none;
+  color: #F5F5F5; }
+  a:hover {
+    color: #FF533D; }
+
+/*
+	===============================
+	Buttons
+	===============================
+*/
+.logo {
+  padding: 40px 0 22px 0;
+  float: left;
+  font-size: 48px;
+  line-height: 44px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.5px; }
 
 /*# sourceMappingURL=main.css.map */

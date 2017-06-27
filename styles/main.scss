@@ -56,16 +56,188 @@ table {
 	}
 }
 
+
+
+
+
+
+
+
+
 /*
 	===============================
-	imports
+	Imports
 	===============================
 */
-
 @import "helpers/variables";
 @import "layout/grid";
 
+body{
+	color: $eggshell;
+	font: 300 16px/22px "Lato", "Open Sans", Helvetica, sans-serif;
+	background: $navy-blue;
+}
 
+
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Grid
+	===============================
+*/
+.container{
+	@include pad-left-right(30px, 30px);
+}
+
+.grid{
+	@include pad-left-right(15px, 15px);
+}
+
+.container, .grid{
+	margin: 0 auto;
+	width: 960px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Clearfix
+	===============================
+*/
+.group{
+	&:before,
+	&:after{
+		content: "";
+		display: table;
+	}
+	&:after{
+		clear:both;
+	}
+	clear: both;
+	*zoom: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Row
+	===============================
+*/
+.row{
+	background: #fff;
+	padding: 66px 0 44px 0;
+	min-width: 960px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Header
+	===============================
+*/
+
+
+
+/*
+	===============================
+	Footer
+	===============================
+*/
+
+
+
+/*
+	===============================
+	Navigation
+	===============================
+*/
+
+.nav{
+	li{
+		display: inline-block;
+		margin: 0 10px;
+		vertical-align: top;
+	}
+	li:last-child{
+		margin-right: 0;
+	}
+	font-size: 14px;
+	font-weight: 400px;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+	text-align: right;
+	margin: 66px 0 22px 0
+}
+
+/*
+	===============================
+	Links
+	===============================
+*/
+a{
+	text-decoration: none;
+	color: $eggshell;
+	&:hover{
+		color: $coral;
+	}
+}
+
+
+
+
+
+
+
+
+/*
+	===============================
+	Buttons
+	===============================
+*/
+
+
+.logo{
+	padding: 40px 0 22px 0;
+	float:left;
+	font-size: 48px;
+	line-height: 44px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
 
 
 

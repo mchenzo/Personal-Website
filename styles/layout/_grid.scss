@@ -1,10 +1,13 @@
+
+
+
 @mixin row($bgcolor, $top-pad, $bottom-pad) {
 	font-size: 0; //gets rid of unwanted margin between inline-block elements
 	background: $bgcolor;
 	padding: $top-pad 0 $bottom-pad 0;
 }
 
-@mixin col($col, $total, $gap: 1em, $align: top, $first: false, $last: false){ 
+@mixin colum($col, $total, $gap: 1em, $align: top, $first: false, $last: false){ 
 	width: 100%;
 	font-size: 14px;
 	display: inline-block;
@@ -15,4 +18,9 @@
 		width: percentage($col/$total);
 		vertical-align: $align;
 	}
+}
+
+@mixin pad-left-right($left, $right){
+	padding-left: $left;
+	padding-right: $right;
 }
