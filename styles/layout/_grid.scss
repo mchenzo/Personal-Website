@@ -1,5 +1,7 @@
-@mixin row() {
+@mixin row($bgcolor, $top-pad, $bottom-pad) {
 	font-size: 0; //gets rid of unwanted margin between inline-block elements
+	background: $bgcolor;
+	padding: $top-pad 0 $bottom-pad 0;
 }
 
 @mixin col($col, $total, $gap: 1em, $align: top, $first: false, $last: false){ 
